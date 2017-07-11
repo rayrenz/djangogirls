@@ -1,0 +1,10 @@
+<h1>Django Girls Blog</h1>
+{% if published_post_list %}
+    {% for post in published_post_list %}
+        <div>
+            <p>{{ post.date_published }}</p>
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.text | truncatechars:200}} <a href="#">read more</a></p>
+        </div>
+    {% endfor %}
+{% endif %}
